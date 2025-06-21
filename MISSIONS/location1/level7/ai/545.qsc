@@ -1,0 +1,16 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AreaActivate_1703.nActive == TRUE && AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		AIAction_WalkToNode(367, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

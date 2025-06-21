@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 210
 932_03_1
 1
@@ -941,6 +942,8 @@ crater1_argb8888
 342_03_1
 1
 107_01_1_argb8888
+
+//Textures
 130
 932_01_1_argb8888
 930_01_1_argb8888
@@ -1072,4 +1075,13 @@ crater1_argb8888
 202_05_1
 332_03_1
 107_01_1_argb8888
+
+//VNAM
 0
+
+//Bone Animations
+0
+
+//Shadow Models
+1
+hawkshadow
