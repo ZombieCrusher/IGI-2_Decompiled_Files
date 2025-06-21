@@ -1,0 +1,9 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_ENEMYDETECTION)
+{
+	AISquad_ManStationaryGun();
+	AISquad_DefaultHandler();
+}
+else
+{
+	AISquad_DefaultHandler();
+}

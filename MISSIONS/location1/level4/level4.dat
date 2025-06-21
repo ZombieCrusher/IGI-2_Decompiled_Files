@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 257
 good_sc_1
 4
@@ -1139,6 +1140,8 @@ bjorntemp2
 bjorntemp
 1
 300_24_1
+
+//Textures
 147
 ch_gsci_01
 ch_gsci_00
@@ -1287,4 +1290,13 @@ blueprints
 710_02_1_argb8888
 710_03_1_argb8888
 300_24_1
+
+//VNAM
 0
+
+//Bone Animations
+0
+
+//Shadow Models
+1
+hawkshadow

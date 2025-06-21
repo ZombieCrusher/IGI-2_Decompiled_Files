@@ -1,0 +1,16 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		AIAction_Patrol(622, 0, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

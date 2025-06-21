@@ -1,0 +1,15 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(HumanSoldier_430.isDead || HumanSoldier_431.isDead || HumanSoldier_432.isDead || HumanSoldier_433.isDead || HumanSoldier_434.isDead || HumanSoldier_435.isDead || HumanSoldier_436.isDead)
+	{
+		AISquad_MoveToNode(267);
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

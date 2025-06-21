@@ -1,0 +1,8 @@
+if(AreaActivate_2107.nActive)
+{
+	AISquad_MoveToNode(209);
+}
+else
+{
+	AISquad_DefaultHandler();
+}

@@ -1,0 +1,30 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetIdleViewCone1Alpha(30);
+	AIFunction_SetIdleViewCone1Length(100);
+	AIFunction_SetInvestigateViewCone1Alpha(45);
+	AIFunction_SetInvestigateViewCone1Length(120);
+	AIFunction_SetCombatViewCone1Alpha(60);
+	AIFunction_SetCombatViewCone1Length(120);
+	AIFunction_SetMinRangeAccuracy(80);
+	AIFunction_SetMaxRangeAccuracy(20);
+	AIFunction_SetAccuracyMaxRange(120);
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	if(HumanSoldier_430.isDead || HumanSoldier_431.isDead || HumanSoldier_432.isDead || HumanSoldier_433.isDead || HumanSoldier_434.isDead || HumanSoldier_435.isDead || HumanSoldier_436.isDead)
+	{
+		AIAction_RunToNode(20, 1);
+		AIAction_LookAtNode(30, 1);
+		AIFunction_PassEventOnToSquad();
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+}
+else
+{
+	AIFunction_DefaultHandler();
+}
