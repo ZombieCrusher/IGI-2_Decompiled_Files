@@ -1,0 +1,15 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(LevelTimer_2701.nTick > 20 * GAME_FREQUENCY)
+	{
+		AISquad_Patrol(638);
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

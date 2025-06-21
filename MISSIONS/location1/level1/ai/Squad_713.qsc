@@ -1,0 +1,34 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(EditVariable_103.nValue == 1)
+	{
+		if(AreaActivate_167.nActive)
+		{
+			AISquad_Patrol(640);
+		}
+		if(AreaActivate_166.nActive)
+		{
+			AISquad_Patrol(639);
+		}
+		else
+		{
+			if(AreaActivate_169.nActive)
+			{
+				AISquad_Patrol(638);
+			}
+			else
+			{
+				AISquad_DefaultHandler();
+			}
+
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

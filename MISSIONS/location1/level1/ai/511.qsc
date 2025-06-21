@@ -1,0 +1,23 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	if(SCamera_106.isExploded)
+	{
+		AIAction_RunToNode(460, 0);
+	}
+	else
+	{
+		AIAction_WalkToNode(550, 1);
+		AIAction_LookAtNode(551, 1);
+		AIAction_Idle(1);
+		AIFunction_DefaultHandler();
+		AIFunction_PassEventOnToSquad();
+	}
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

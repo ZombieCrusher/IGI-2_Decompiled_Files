@@ -1,0 +1,15 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	AIAction_WalkToNode(532, 1);
+	AIAction_LookAtNode(521, 1);
+	AIAction_Idle(1);
+	AIFunction_PassEventOnToSquad();
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

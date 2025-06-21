@@ -1,0 +1,19 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetIdleViewCone1Alpha(90);
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		AIAction_Patrol(668, 0, 1);
+		AIAction_Idle(1);
+		AIFunction_PassEventOnToSquad();
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

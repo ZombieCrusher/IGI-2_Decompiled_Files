@@ -1,0 +1,24 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(EditVariable_103.nValue == 1 && AreaActivate_166.nActive)
+	{
+		AISquad_MoveToNode(724);
+		AISquad_MoveToNode(566);
+	}
+	else
+	{
+		if(EditVariable_103.nValue == 1 && AreaActivate_167.nActive)
+		{
+			AISquad_MoveToNode(540);
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}
