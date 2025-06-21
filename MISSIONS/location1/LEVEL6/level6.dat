@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 328
 230_05_1
 1
@@ -1510,6 +1511,8 @@ ch_gsci_00
 bjorntemp
 1
 300_24_1
+
+//Textures
 256
 230_06_1
 332_02_1
@@ -1767,4 +1770,13 @@ ch_gci_03_argb8888
 526_01_1
 307_01_1
 300_24_1
+
+//VNAM
 0
+
+//Bone Animations
+0
+
+//Shadow Models
+1
+hawkshadow

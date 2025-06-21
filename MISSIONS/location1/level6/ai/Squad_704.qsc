@@ -1,0 +1,50 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_ALARMON)
+{
+	if(EditVariable_301.nValue < 2 && EditVariable_103.nValue == 1)
+	{
+		if(AreaActivate_1190.nActive == TRUE)
+		{
+			AISquad_MoveToNode(90);
+		}
+		if(AreaActivate_1191.nActive == TRUE)
+		{
+			AISquad_MoveToNode(236);
+		}
+		if(AreaActivate_1192.nActive == TRUE)
+		{
+			AISquad_MoveToNode(182);
+		}
+		if(AreaActivate_1193.nActive == TRUE)
+		{
+			AISquad_MoveToNode(73);
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+	}
+	else
+	{
+		if(EditVariable_301.nValue == 3)
+		{
+			AISquad_MoveToNode(57);
+			if(Door_331.isOpen)
+			{
+				AISquad_MoveToNode(92);
+			}
+			else
+			{
+				AISquad_DefaultHandler();
+			}
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

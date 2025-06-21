@@ -1,0 +1,39 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_ALARMON)
+{
+	if(SCamera_109.isLastDetection)
+	{
+		AISquad_MoveToNode(13);
+	}
+	else
+	{
+		if(EditVariable_3024.nValue == 1)
+		{
+			AISquad_MoveToNode(118);
+		}
+		else
+		{
+			if(SCamera_106.isLastDetection)
+			{
+				AISquad_MoveToNode(42);
+			}
+			else
+			{
+				if(SCamera_107.isLastDetection)
+				{
+					AISquad_MoveToNode(79);
+				}
+				else
+				{
+					AISquad_DefaultHandler();
+				}
+
+			}
+
+		}
+
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

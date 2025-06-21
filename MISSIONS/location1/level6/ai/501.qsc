@@ -1,0 +1,19 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(EditVariable_320.nValue == 1)
+{
+	if(HumanSoldier_400.isDead)
+	{
+		AIAction_RunToNode(105, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

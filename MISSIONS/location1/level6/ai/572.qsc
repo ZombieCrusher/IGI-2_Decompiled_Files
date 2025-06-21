@@ -1,0 +1,12 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	AIAction_Patrol(810, 1, 1);
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

@@ -1,0 +1,25 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(Terminal_110.isHacked)
+		{
+			AIAction_WalkToNode(102, 1);
+			AIFunction_PassEventOnToSquad();
+			AIFunction_DefaultHandler();
+		}
+		else
+		{
+			AIFunction_DefaultHandler();
+		}
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

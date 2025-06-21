@@ -1,0 +1,15 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_ALARMON)
+{
+	if(EditVariable_301.nValue == 3 && AISquad_704.isDead)
+	{
+		AISquad_MoveToNode(96);
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}
