@@ -1,0 +1,19 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(GenericPickup_1950.isPickedUp == TRUE)
+		{
+			AIAction_RunToNode(570, 1);
+		}
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

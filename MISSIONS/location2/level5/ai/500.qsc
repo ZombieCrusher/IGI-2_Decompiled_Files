@@ -1,0 +1,19 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(SplinePathGuideQTask_4074.vPosition > 5)
+		{
+			AIAction_RunToNode(228, 1);
+		}
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

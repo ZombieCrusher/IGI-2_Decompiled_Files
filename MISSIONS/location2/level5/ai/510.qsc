@@ -1,0 +1,24 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_SetIdleViewCone1Alpha(120);
+	AIFunction_SetIdleViewCone1Length(400);
+	AIFunction_SetIdleViewCone2Alpha(120);
+	AIFunction_SetIdleViewCone2Length(400);
+	AIFunction_SetCombatViewCone1Alpha(120);
+	AIFunction_SetCombatViewCone1Length(400);
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(EditVariable_2024.nValue == 1)
+		{
+		}
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

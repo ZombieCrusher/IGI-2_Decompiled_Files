@@ -1,0 +1,23 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(SplinePathGuideQTask_4074.vPosition > 25 && StatusMessage_91.isSendt)
+	{
+		AISquad_Patrol(1702);
+	}
+	else
+	{
+		if(SplinePathGuideQTask_4074.vPosition > 22 && !StatusMessage_91.isSendt)
+		{
+			AISquad_Patrol(1703);
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

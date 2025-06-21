@@ -1,0 +1,16 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AISquad_GetEvent() == AIEVENT_ENEMYDETECTION)
+	{
+		AISquad_ManStationaryGun();
+		AISquad_SwitchState(AISquadState_HoldArea);
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 258
 zib_1
 2
@@ -1270,6 +1271,8 @@ pad
 350_07_1
 1
 437_18_1_argb8888
+
+//Textures
 229
 ch_zlb_01
 ch_zlb_00
@@ -1500,4 +1503,14 @@ militaryon
 pad
 232_03_1
 437_18_1_argb8888
+
+//VNAM
 0
+
+//Bone Animations
+0
+
+//Shadow Models
+2
+KA27shadow
+rotorshadow
