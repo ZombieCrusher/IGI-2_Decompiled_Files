@@ -1,0 +1,13 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetViewLength(10);
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

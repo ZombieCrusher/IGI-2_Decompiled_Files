@@ -1,0 +1,31 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	AIAction_WalkToNode(1158, AIACTIONFLAG_PUSHABLE);
+	AIAction_LookAtNode(1026, AIACTIONFLAG_PUSHABLE);
+	if(EditVariable_103.nValue == 1 && !AreaActivate_119.nActive)
+	{
+		AIAction_RunToNode(818, 1);
+		AIAction_LookAtNode(1218, AIACTIONFLAG_PUSHABLE);
+	}
+	else
+	{
+		if(EditVariable_103.nValue == 1 && AreaActivate_119.nActive)
+		{
+			AIAction_RunToNode(1025, 1);
+			AIAction_LookAround(AILOOKAROUND_PATTERN_180_CLOCKWISE, 1);
+		}
+		else
+		{
+			AIFunction_DefaultHandler();
+		}
+
+	}
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

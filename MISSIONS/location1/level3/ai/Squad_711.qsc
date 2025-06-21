@@ -1,0 +1,39 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(AreaActivate_123.nActive)
+	{
+		AISquad_MoveToNode(556);
+	}
+	else
+	{
+		if(AreaActivate_119.nActive)
+		{
+			AISquad_MoveToNode(1115);
+		}
+		else
+		{
+			if(AreaActivate_122.nActive)
+			{
+				AISquad_MoveToNode(1083);
+			}
+			else
+			{
+				if(!AreaActivate_119.nActive && !AreaActivate_123.nActive && !AreaActivate_122.nActive)
+				{
+					AISquad_Patrol(618);
+				}
+				else
+				{
+					AISquad_DefaultHandler();
+				}
+
+			}
+
+		}
+
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

@@ -1,0 +1,19 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	if(EditVariable_117.nValue == 1 && EditVariable_103.nValue == 1)
+	{
+		AIAction_Patrol(615, 0, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

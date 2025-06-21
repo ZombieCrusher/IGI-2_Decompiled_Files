@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 191
 bad_sc_1
 5
@@ -843,6 +844,8 @@ bjorntemp
 300_28_1
 300_27_1
 300_29_1
+
+//Textures
 181
 ch_bsci_01
 ch_bsci_00
@@ -1025,4 +1028,12 @@ parachute
 300_28_1
 300_27_1
 300_29_1
+
+//VNAM
+0
+
+//Bone Animations
+0
+
+//Shadow Models
 0

@@ -1,0 +1,23 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	AIAction_WalkToNode(1277, AIACTIONFLAG_PUSHABLE);
+	AIAction_LookAtNode(1215, AIACTIONFLAG_PUSHABLE);
+	AIAction_LookAround(AILOOKAROUND_PATTERN_180_CLOCKWISE, 1);
+	if(EditVariable_103.nValue == 1 && AreaActivate_119.nActive)
+	{
+		AIAction_RunToNode(1082, 1);
+		AIAction_LookAround(AILOOKAROUND_PATTERN_360_FAST, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+}
+else
+{
+	AIFunction_DefaultHandler();
+}
