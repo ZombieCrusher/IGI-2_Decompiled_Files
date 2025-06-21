@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 227
 307_05_1
 2
@@ -1122,6 +1123,8 @@ ch_rq_00
 bjorntemp2
 1
 300_24_1
+
+//Textures
 153
 307_05_1
 tunnel
@@ -1276,4 +1279,13 @@ ch_rq_00
 700_27_1_argb8888
 700_19_1
 300_24_1
+
+//VNAM
 0
+
+//Bone Animations
+0
+
+//Shadow Models
+1
+hawkshadow

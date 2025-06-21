@@ -1,0 +1,25 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetIdleViewCone1Alpha(20);
+	AIFunction_SetIdleViewCone1Length(100);
+	AIFunction_SetInvestigateViewCone1Alpha(35);
+	AIFunction_SetInvestigateViewCone1Length(120);
+	AIFunction_SetCombatViewCone1Alpha(50);
+	AIFunction_SetCombatViewCone1Length(120);
+	AIFunction_SetMaxRangeAccuracy(120);
+	AIFunction_SetMinRangeAccuracy(100);
+	AIFunction_SetAccuracyMaxRange(120);
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		AIAction_RunToNode(17, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

@@ -1,0 +1,19 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(LevelTimer_1703.nTick > 5 * GAME_FREQUENCY)
+		{
+			AIAction_WalkToNode(45, 1);
+		}
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

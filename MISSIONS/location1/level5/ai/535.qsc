@@ -1,0 +1,19 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetCombatViewCone1Alpha(15);
+	AIFunction_SetCombatViewCone1Length(100);
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		AIAction_WalkToNode(104, 1);
+		AIAction_LookAtNode(50, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

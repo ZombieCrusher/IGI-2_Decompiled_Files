@@ -1,0 +1,11 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AreaActivate_2106.nActive)
+	{
+		AISquad_MoveToNode(379);
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}
