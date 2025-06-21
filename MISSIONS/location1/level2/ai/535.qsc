@@ -1,0 +1,12 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetViewGamma(270);
+	AIFunction_SetViewLength(50);
+	AIFunction_SetMaxRangeAccuracy(2);
+	AIFunction_SetAccuracyMaxRange(20);
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

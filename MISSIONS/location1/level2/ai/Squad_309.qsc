@@ -1,0 +1,23 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(EditVariable_103.nValue == 1)
+	{
+		AISquad_Patrol(604);
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	if(AISquad_GetEvent() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_FRIENDLY_GUNSHOT)
+	{
+		AISquad_ReceiverLookAtEvent();
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+
+}

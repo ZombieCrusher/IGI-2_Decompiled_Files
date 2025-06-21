@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 190
 410_60_1
 1
@@ -833,6 +834,8 @@ elevator
 400_66_1
 1
 410_24_1
+
+//Textures
 155
 413_28_1
 400_49_1
@@ -989,4 +992,12 @@ elevator
 400_15_1_argb8888
 407_04_1
 370_01_1
+
+//VNAM
+0
+
+//Bone Animations
+0
+
+//Shadow Models
 0

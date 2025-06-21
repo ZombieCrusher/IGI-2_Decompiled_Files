@@ -1,0 +1,11 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(EditVariable_103.nValue == 1)
+	{
+		AISquad_Patrol(605);
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

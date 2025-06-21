@@ -1,0 +1,46 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_ALARMON)
+{
+	if(!AreaActivate_1201.nActive)
+	{
+		AISquad_Patrol(608);
+	}
+	else
+	{
+		if(AreaActivate_1201.nActive)
+		{
+			AISquad_Patrol(609);
+		}
+		else
+		{
+			if(AreaActivate_1202.nActive)
+			{
+				AISquad_Patrol(611);
+			}
+			else
+			{
+				AISquad_DefaultHandler();
+			}
+
+		}
+
+	}
+}
+else
+{
+	if(AISquad_GetState() == AISquadState_Idle)
+	{
+		if(AISquad_GetEvent() == AIEVENT_FRIENDLY_GUNSHOT || AISquad_GetEvent() == AIEVENT_WOUNDED_CRY || AISquad_GetEvent() == AIEVENT_DEATH_CRY)
+		{
+			AISquad_ReceiverLookAtEvent();
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+
+}
