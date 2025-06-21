@@ -1,0 +1,25 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(AreaActivate_1205.nActive)
+		{
+			AIAction_Patrol(602, 0, 1);
+			AIFunction_PassEventOnToSquad();
+		}
+		else
+		{
+			AIFunction_DefaultHandler();
+			AIFunction_PassEventOnToSquad(1);
+		}
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

@@ -1,0 +1,18 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetInstantDeath(FALSE);
+	AIFunction_SetSideKick(TRUE);
+	AIFunction_SetHitPoints(10);
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	if(EditVariable_150.nValue == 1)
+	{
+		AIAction_RunToNode(9, 1);
+	}
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

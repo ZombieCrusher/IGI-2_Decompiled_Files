@@ -1,0 +1,42 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(EditVariable_103.nValue == 1)
+	{
+		if(AreaActivate_1056.nActive)
+		{
+			AISquad_MoveToNode(989);
+			AISquad_MoveToNode(1208);
+			AISquad_MoveToNode(522);
+			AISquad_MoveToNode(152);
+		}
+		else
+		{
+			if(AreaActivate_1055.nActive)
+			{
+				AISquad_MoveToNode(116);
+				AISquad_MoveToNode(855);
+			}
+			else
+			{
+				AISquad_DefaultHandler();
+			}
+
+		}
+	}
+	else
+	{
+		if(SCamera_109.isExploded)
+		{
+			AISquad_MoveToNode(314);
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

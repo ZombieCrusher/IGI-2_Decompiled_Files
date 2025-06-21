@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 275
 500_21_1
 2
@@ -1359,6 +1360,8 @@ ref1
 900_16_5
 1
 900_18_1_argb8888
+
+//Textures
 177
 500_07_1
 500_05_1
@@ -1537,4 +1540,12 @@ ref1
 303_03_1_argb8888
 350_05_1
 900_18_1_argb8888
+
+//VNAM
+0
+
+//Bone Animations
+0
+
+//Shadow Models
 0

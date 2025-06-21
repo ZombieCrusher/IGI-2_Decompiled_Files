@@ -1,0 +1,39 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(EditVariable_103.nValue == 1)
+	{
+		if(AreaActivate_1050.nActive)
+		{
+			AISquad_MoveToNode(256);
+		}
+		else
+		{
+			if(AreaActivate_1055.nActive)
+			{
+				AISquad_MoveToNode(700);
+				AISquad_MoveToNode(724);
+			}
+			else
+			{
+				if(AreaActivate_1056.nActive)
+				{
+					AISquad_MoveToNode(677);
+				}
+				else
+				{
+					AISquad_DefaultHandler();
+				}
+
+			}
+
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

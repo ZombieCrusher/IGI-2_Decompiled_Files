@@ -1,0 +1,54 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	if(EditVariable_103.nValue == 1)
+	{
+		if(AreaActivate_1050.nActive || AreaActivate_1051.nActive || AreaActivate_1052.nActive || AreaActivate_1053.nActive)
+		{
+			AISquad_MoveToNode(472);
+		}
+		else
+		{
+			if(AreaActivate_1055.nActive || AreaActivate_1054.nActive)
+			{
+				AISquad_MoveToNode(860);
+				AISquad_MoveToNode(893);
+			}
+			else
+			{
+				if(AreaActivate_1056.nActive)
+				{
+					AISquad_MoveToNode(975);
+				}
+				else
+				{
+					AISquad_DefaultHandler();
+				}
+
+			}
+
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	if(AISquad_GetState() == AISquadState_Idle)
+	{
+		if(AISquad_GetEvent() == AIEVENT_FRIENDLY_GUNSHOT || AISquad_GetEvent() == AIEVENT_GUNSHOT || AISquad_GetEvent() == AIEVENT_DEATH_CRY)
+		{
+			AISquad_ReceiverLookAtEvent();
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+
+}

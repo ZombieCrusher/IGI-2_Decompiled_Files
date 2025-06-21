@@ -1,0 +1,15 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AISquad_GetEvent() == AIEVENT_IDLE)
+	{
+		AISquad_MoveToNode();
+	}
+	else
+	{
+		AISquad_DefaultHandler(532);
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

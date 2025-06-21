@@ -1,0 +1,18 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AISquad_GetEvent() == AIEVENT_ENEMYDETECTION)
+	{
+		AISquad_SwitchState(AISquadState_HoldArea);
+	}
+}
+else
+{
+	if(AISquad_GetState() == AISquadState_HoldArea)
+	{
+		if(AISquad_GetEvent() == AIEVENT_LOSTSIGHTOFENEMY)
+		{
+			AISquad_SwitchState(AISquadState_Idle);
+		}
+	}
+
+}
