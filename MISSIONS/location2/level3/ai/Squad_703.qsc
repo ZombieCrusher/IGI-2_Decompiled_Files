@@ -1,0 +1,18 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AISquad_GetEvent() == AIEVENT_ALARMON)
+	{
+		if(Terminal_110.isHacked)
+		{
+			AISquad_MoveToNode(182);
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

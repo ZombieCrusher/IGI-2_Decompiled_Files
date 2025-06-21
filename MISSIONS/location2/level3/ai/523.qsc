@@ -1,0 +1,17 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		AIAction_WalkToNode(190, 1);
+		AIAction_LookAtNode(198, 1);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

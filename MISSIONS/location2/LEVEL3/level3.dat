@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 213
 303_02_1
 3
@@ -1053,6 +1054,8 @@ engine
 600_09_1_argb8888
 600_01_1_argb8888
 600_08_1_argb8888
+
+//Textures
 208
 303_01_1_argb8888
 303_03_1_argb8888
@@ -1262,4 +1265,12 @@ ref1
 900_04_1
 900_06_3_argb8888
 engine
+
+//VNAM
+0
+
+//Bone Animations
+0
+
+//Shadow Models
 0

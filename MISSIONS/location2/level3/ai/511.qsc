@@ -1,0 +1,20 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetIdleViewCone1Alpha(120);
+	AIFunction_SetIdleViewCone1Length(40);
+	AIFunction_SetIdleViewCone2Alpha(90);
+	AIFunction_SetIdleViewCone2Length(3);
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		AIAction_Patrol(611, 0, AIACTIONFLAG_NONE);
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

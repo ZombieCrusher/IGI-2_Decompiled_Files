@@ -1,0 +1,30 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AISquad_GetEvent() == AIEVENT_ALARMON)
+	{
+		AISquad_MoveToNode(109);
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	if(AISquad_GetState() == AISquadState_Idle)
+	{
+		if(AISquad_GetEvent() == AIEVENT_GUNSHOT || AISquad_GetEvent() == AIEVENT_FRIENDLY_GUNSHOT)
+		{
+			AISquad_ReceiverLookAtEvent();
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+
+}
