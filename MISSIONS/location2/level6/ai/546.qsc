@@ -1,0 +1,9 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetHitPoints(1.2000000476837158);
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

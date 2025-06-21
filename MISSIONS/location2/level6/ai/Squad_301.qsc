@@ -1,0 +1,23 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_ALARMON)
+{
+	if(AreaActivate_353.nActive)
+	{
+		AISquad_Patrol(603);
+	}
+	else
+	{
+		if(AreaActivate_354.nActive || AreaActivate_355.nActive)
+		{
+			AISquad_Patrol(604);
+		}
+		else
+		{
+			AISquad_DefaultHandler();
+		}
+
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

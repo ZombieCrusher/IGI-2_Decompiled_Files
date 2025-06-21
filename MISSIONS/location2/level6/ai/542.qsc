@@ -1,0 +1,9 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+	AIFunction_SetViewGamma(30);
+}
+else
+{
+	AIFunction_DefaultHandler();
+}
