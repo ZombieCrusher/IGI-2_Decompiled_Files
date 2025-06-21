@@ -1,0 +1,24 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(EditVariable_3356.nValue == 1)
+		{
+			AIAction_Activate(352, 1, 0);
+		}
+		else
+		{
+			AIAction_Patrol(601, 0, 0);
+		}
+		AIFunction_PassEventOnToSquad();
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

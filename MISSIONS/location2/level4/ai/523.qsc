@@ -1,0 +1,13 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	AIAction_Patrol(602, 0, 1);
+	AIFunction_PassEventOnToSquad(0);
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

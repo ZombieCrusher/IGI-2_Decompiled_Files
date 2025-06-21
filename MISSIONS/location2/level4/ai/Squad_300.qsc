@@ -1,0 +1,39 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	AISquad_Patrol(603);
+}
+else
+{
+	if(AISquad_GetState() == AISquadState_Patrol && AISquad_GetEvent() == AIEVENT_ALARMON)
+	{
+		if(AreaActivate_150.nActive)
+		{
+			AISquad_Patrol(610);
+		}
+		else
+		{
+			if(AreaActivate_151.nActive)
+			{
+				AISquad_Patrol(611);
+			}
+			else
+			{
+				if(AreaActivate_152.nActive)
+				{
+					AISquad_Patrol(612);
+				}
+				else
+				{
+					AISquad_DefaultHandler();
+				}
+
+			}
+
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+
+}
