@@ -1,0 +1,15 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AISquad_GetEvent() == AIEVENT_GUNSHOT || AISquad_GetEvent() == AIEVENT_FRIENDLY_GUNSHOT || AISquad_GetEvent() == AIEVENT_DEATH_CRY || AISquad_GetEvent() == AIEVENT_WOUNDED_CRY || AISquad_GetEvent() == AIEVENT_TAKINGDAMAGE || AISquad_GetEvent() == AIEVENT_GUNSHOTMISS || AISquad_GetEvent() == AIEVENT_EXPLOSION)
+	{
+		AISquad_SwitchState(AISquadState_HoldArea);
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

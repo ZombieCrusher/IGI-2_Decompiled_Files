@@ -1,0 +1,68 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_SetCombatViewCone1Alpha(0);
+	AIFunction_SetCombatViewCone1Length(0);
+	AIFunction_SetIdleViewCone1Alpha(0);
+	AIFunction_SetIdleViewCone1Length(0);
+	AIFunction_SetInvestigateViewCone1Alpha(0);
+	AIFunction_SetInvestigateViewCone1Length(0);
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(EditVariable_1506.nValue == 1)
+	{
+		if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+		{
+			AIAction_RunToNode(1643, 1);
+		}
+		else
+		{
+			if(AIFunction_GetCurrentEventType() == AIEVENT_ENEMYDETECTION)
+			{
+				if(!HumanSoldier_424.isDead)
+				{
+					AIAction_RunToNode(1887, 1);
+				}
+				else
+				{
+					if(!AISquad_206.isDead)
+					{
+						AIAction_RunToNode(1152, 1);
+						AIAction_LookAtEvent(4, 1);
+					}
+					else
+					{
+						AIFunction_DefaultHandler();
+					}
+
+				}
+			}
+			else
+			{
+				AIFunction_DefaultHandler();
+			}
+
+		}
+	}
+	else
+	{
+		if(EditVariable_1506.nValue == 2)
+		{
+			if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+			{
+				AIAction_WalkToNode(111, 1);
+			}
+			else
+			{
+				AIFunction_DefaultHandler();
+			}
+		}
+		else
+		{
+			AIFunction_DefaultHandler();
+		}
+
+	}
+
+}
