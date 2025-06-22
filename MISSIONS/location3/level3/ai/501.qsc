@@ -1,0 +1,24 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+	{
+		if(EditVariable_115.nValue == 1)
+		{
+			AIAction_Patrol(624, 0, 1);
+			AIFunction_PassEventOnToSquad();
+		}
+		else
+		{
+			AIFunction_DefaultHandler();
+		}
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}

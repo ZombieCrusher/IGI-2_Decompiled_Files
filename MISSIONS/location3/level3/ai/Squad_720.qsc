@@ -1,0 +1,20 @@
+if(AISquad_GetState() == AISquadState_Idle && AISquad_GetEvent() == AIEVENT_IDLE)
+{
+	AISquad_DefaultHandler();
+}
+else
+{
+	if(AISquad_GetState() == AISquadState_Idle)
+	{
+		AISquad_DefaultHandler();
+		if(AISquad_GetEvent() == AIEVENT_ENEMYDETECTION || EditVariable_103.nValue == 1 && !AreaActivate_302.nActive)
+		{
+			AISquad_ManStationaryGun();
+		}
+	}
+	else
+	{
+		AISquad_DefaultHandler();
+	}
+
+}

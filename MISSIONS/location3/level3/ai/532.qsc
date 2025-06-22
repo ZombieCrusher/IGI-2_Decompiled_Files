@@ -1,0 +1,18 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE && EditVariable_103.nValue == 0)
+	{
+		AIAction_WalkToNode(628, 1);
+		AIAction_LookAtNode(591, 1);
+		AIFunction_PassEventOnToSquad();
+	}
+	else
+	{
+		AIFunction_DefaultHandler();
+	}
+
+}
