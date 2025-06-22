@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 310
 bjorntemp
 1
@@ -1353,6 +1354,8 @@ ornamentnew
 940_13_5
 1
 938_23_1_argb8888
+
+//Textures
 168
 300_24_1
 tekstur copy
@@ -1522,4 +1525,12 @@ china_temple_wall
 938_21_1_argb8888
 938_25_1_argb8888
 938_23_1_argb8888
+
+//VNAM
+0
+
+//Bone Animations
+0
+
+//Shadow Models
 0

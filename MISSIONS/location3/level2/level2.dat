@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 152
 408_01_1
 2
@@ -567,6 +568,8 @@ pad
 220_01_3
 1
 pad
+
+//Textures
 72
 406_51_1
 406_53_1_argb8888
@@ -640,4 +643,12 @@ military
 keys
 militaryon
 pad
+
+//VNAM
+0
+
+//Bone Animations
+0
+
+//Shadow Models
 0
