@@ -1,0 +1,25 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+else
+{
+	if(StatusMessage_3205.nTicksSinceFinishedDisplay == 2 * GAME_FREQUENCY)
+	{
+		AIAction_WalkToNode(63, 1);
+		AIAction_LookAround(AILOOKAROUND_PATTERN_180_CLOCKWISE, AIACTIONFLAG_NONE);
+	}
+	else
+	{
+		if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+		{
+			AIAction_LookAround(AILOOKAROUND_PATTERN_180_CLOCKWISE, AIACTIONFLAG_NONE);
+		}
+		else
+		{
+			AIFunction_DefaultHandler();
+		}
+
+	}
+
+}

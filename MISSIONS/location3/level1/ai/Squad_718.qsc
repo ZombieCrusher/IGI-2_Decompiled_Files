@@ -1,0 +1,11 @@
+if(AISquad_GetState() == AISquadState_Idle)
+{
+	if(AISquad_GetEvent() == AIEVENT_IDLE)
+	{
+		AISquad_Patrol(619);
+	}
+}
+else
+{
+	AISquad_DefaultHandler();
+}

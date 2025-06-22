@@ -1,0 +1,13 @@
+if(AIFunction_GetCurrentEventType() == AIEVENT_CREATE)
+{
+	AIFunction_DefaultHandler();
+}
+if(AIFunction_GetCurrentEventType() == AIEVENT_IDLE)
+{
+	AIAction_WalkToNode(87, AIACTIONFLAG_PUSHABLE);
+	AIAction_LookAtNode(127, AIACTIONFLAG_PUSHABLE);
+}
+else
+{
+	AIFunction_DefaultHandler();
+}

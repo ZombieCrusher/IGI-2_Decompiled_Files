@@ -1,6 +1,7 @@
 *** This file is machine generated
 *** DO NOT EDIT!
 
+// Models
 263
 313_12_1
 1
@@ -1132,6 +1133,8 @@ white_2
 2
 phw_2
 phw_1
+
+//Textures
 165
 radio
 261_01_1
@@ -1298,4 +1301,13 @@ ch_wo_01
 ch_wo_00
 phw_2
 phw_1
+
+//VNAM
 0
+
+//Bone Animations
+0
+
+//Shadow Models
+1
+s-70shadow
